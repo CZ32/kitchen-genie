@@ -1,0 +1,140 @@
+/* ==================== General ==================== */
+#home-container * {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(50, 50, 50);
+}
+
+#home-container {
+  height: 100%;
+  background-image: url(../assets/splash.jpeg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home-container h1 {
+  height: fit-content;
+  font-size: 72px;
+  color: rgb(116, 166, 127);
+  margin-top: 2%;
+  margin-bottom: 0;
+
+}
+
+#home-container span {
+  color: rgb(70, 70, 70);
+  font-size: 18px;
+}
+
+
+
+/* ==================== Search ==================== */
+#home-container #search-container {
+  width: 46%;
+  margin-top: 28px;
+}
+
+#home-container #search-container #title-span {
+  color: rgb(50, 50, 50);
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+#home-container #autosuggest-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+/* Container's child divs i.e. Autosuggest input's div */
+#home-container #autosuggest-container div {
+  width: 80%;
+}
+
+/* Input after autocomplete */
+#home-container input:-webkit-autofill {
+  box-shadow: none;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+#home-container .search-button {
+  height: 44px;
+  width: 12%;
+  background-color: white;
+  border-radius: 22px;
+  margin-left: 32px;
+  transition: background .5s ease;
+  cursor: pointer;
+}
+
+#home-container #grey-button {
+  color: rgb(150, 150, 150);
+  border: solid 2px rgb(150, 150, 150);
+  pointer-events: none;
+}
+
+#home-container #green-button {
+  color: rgb(116, 166, 127);
+  border: solid 2px rgb(116, 166, 127);
+}
+
+#home-container #green-button:hover {
+  color: white;
+  background-color: rgb(116, 166, 127);
+  transition: background .5s ease;
+}
+
+
+
+/* ==================== Ingredients container ==================== */
+#home-container #ingredients-container {
+  position: relative;
+  width: 44%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 8px;
+}
+
+#home-container #ingredients-container button {
+  color: white;
+  background-color: rgb(116, 166, 127);
+  border: none;
+  border-radius: 20px;
+  padding: 4px 8px;
+  margin-right: 4px;
+  transition: background .5s ease;
+}
+
+#home-container #ingredients-container button:hover {
+  background-color: rgb(204, 82, 52, 0.9);
+  transition: background .5s ease;
+}
+
+.delete-icon {
+  height: 8px;
+  width: 8px;
+  margin-left: 6px;
+  margin-right: 2px;
+}
+
+
+
+/* ==================== Random recipe generator ==================== */
+#random-recipe-button {
+  font-size: 16px;
+  color: rgb(116, 166, 127);
+  background-color: transparent;
+  border: none;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+#random-recipe-button:hover {
+  text-decoration: underline;
+  color: rgb(71, 116, 81);
+}

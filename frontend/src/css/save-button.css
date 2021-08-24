@@ -1,0 +1,25 @@
+#save-button-container #save-recipe-button {
+  display: flex;
+  align-items: center;
+}
+
+#save-button-container #save-recipe-button {
+  font-size: 14px;
+  color: rgb(80, 80, 80);
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0 8px;
+  transition: background .5s ease;
+}
+
+#save-button-container #save-recipe-button:hover {
+  background: rgba(200, 200, 200, 0.4);
+  transition: background .5s ease;
+
+}
+
+#save-button-container #save-icon {
+  height: 20px;
+  padding: 8px 4px;
+}

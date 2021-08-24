@@ -1,0 +1,98 @@
+.page-container * {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(50, 50, 50);
+}
+
+.page-container {
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+}
+
+#splash-img {
+  height: 100%;
+  width: 56%;
+  margin-right: 0;
+  margin-left: auto;
+  object-fit: cover;
+}
+
+#registration-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+#registration-container h1 {
+  font-size: 48px;
+  color: rgb(116,166,127);
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  width: 74%;
+}
+
+.email-input input, .password-input input, .password-confirmation-input input, .username-input input {
+  display: block;
+  height: 36px;
+  width: 100%;
+  color: rgb(50, 50, 50);
+  font-weight: 400;
+  font-size: 16px;
+  border: solid 2px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transition: border .5s ease;
+  box-sizing: border-box;
+  padding-left: 8px;
+  margin-bottom: 24px;
+}
+
+input:focus {
+  outline: none;
+  border: solid 2px rgb(116,166,127);
+  transition: border .5s ease;
+}
+
+input:-webkit-autofill {
+  box-shadow: none;
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+form #register-button {
+  height: 40px;
+  width: 100%;
+  color: white;
+  transition: background .5s ease;
+  border: none;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.inactive-button {
+  background: rgb(220, 220, 220);
+  transition: background .5s ease;
+  pointer-events: none;
+}
+
+.active-button {
+  background: rgb(116,166,127);
+  transition: background .5s ease;
+}
+
+.active-button:hover {
+  background-color: rgb(97, 141, 107);
+  transition: background .5s ease;
+}
+
+form .error-message {
+  color: brown;
+}
