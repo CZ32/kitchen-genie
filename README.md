@@ -17,18 +17,16 @@ Our goal for this project was to build a tool that home cooks can use to combat 
 
 - HOME
     - SEARCH RESULTS
-    |  -- RECIPE
+    - RECIPE
     - FAVOURITES (Logged in experience)
-    |  -- RECIPE 
     - ABOUT US
-    |
     - FAQ
 
 #### 1.2 Description 
 
 The kitchen-genie website has both a logged in and logged out experience. In the logged in experience, users from the home page can insert ingredients into the search bar. When searched, Kitchen Genie will fetch data from the Spoonacular API and populate recipes on a Search results page. From here, the user (logged in) can favourite recipes by clicking the heart icon on recipe cards or can click a card to navigate to the recipe page. On the Recipe page, the application will fetch recipe data from the Spoonacular API and populate that information in an clean and consistent manner. The user can view recipe description, preparation and what ingredients they do/don't have (if coming from search results). Again, the user can favourite the recipe (if logged in) and can make comments on the recipe if logged in and only view them if logged out. Logged in users can navigate to the favourites page, where the user can view all favourited recipes. 
 
-## 1.3 Key Features 
+### 1.3 Key Features 
 
 1. Login/Signup page.
 2. Search bar: Allows users to insert the ingredients they have in a stylistic and legible format. Searches Spoonacular API by these ingredients.
@@ -52,7 +50,7 @@ The team also debated on creating a member only experience. The reason being for
 
 The team decided to fetch data from the Spoonacular API from the front end, due to simplicity and speed. However, we all agreed this was a bad choice as it meant we exposed our API key to the front end, and the speed gains were marginal if not inexistent. Making the fetches from the backend would address the security concern and help keep the backend functionality contained within the scope of the kitchen genie api. 
 
-### 4.0 How we set up our database
+## 4.0 How we set up our database
 
 ![database diagram](./frontend/public/db-diagram.png)
 
@@ -90,10 +88,10 @@ Currently, the only bug that can be witnessed is that the session cookie does no
 
 5. Install PostgresSQL. If already installed, skip to step x
 
-'''
+```
 brew install postgresql
 brew services start postgresql
-'''
+```
 
 6. Create a default DB user:
 
@@ -108,17 +106,17 @@ createdb kitchen-genie
 ```
 8. Ensure you can connect to the database. If you do not know your user name. Run the command 'whoami' into the CLI. 
 
-'''
+```
 psql postgres://<user>@localhost:5432/kitchen-genie
-'''
+```
 
 9. Save variable PG_URL="postgres://<user>@localhost:5432/kitchen-genie" to backend/.env.development file
 
 11. Run the schema script in the backend to create database.
 
-'''
+```
 deno run -A --unstable schema.js
-'''
+```
 
 12. Save variable ALLOWED_ORIGINS="http://localhost:3000" to backend/.env.development file
 
@@ -126,21 +124,21 @@ deno run -A --unstable schema.js
 
 14. Install dependencies
 
-'''
+```
 yarn install 
-'''
+```
 
 15. Start frontend app from the route of 'frontend' directory. 
 
-'''
+```
 yarn start
-'''
+```
 
 16. Run server.js from the route of the 'backend' directory.
 
-'''
+```
 deno run -A --unstable server.js
-'''
+```
 
 17. Enjoy
 
