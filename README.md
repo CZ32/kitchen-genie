@@ -70,36 +70,97 @@ The way I located this bug was utilising the network and application tools of th
 
 Currently, the only bug that can be witnessed is that the session cookie does not save client side when the user closes the tab. Therefore the user logs out and has to re-enter details to log back in. This is only an issue with the production version of kitchen-genie.co.uk. Running the application locally servers no problem at all. 
 
-## 7.0 Running Locally
 
-### 7.1 Dependencies
+### 7.0 Dependencies
 
 1. Spoonacular API Key
-2. PostgreSQL 
+2. PostgreSQL ([see for installation](https://www.postgresql.org/docs/13/tutorial-install.html))
+3. Yarn ([see more installation](https://yarnpkg.com/getting-started/install))
+4. Deno ([see for installation](https://deno.land/manual/getting_started/installation))
 
-### 7.2 Installation
+### 8.0 Local Installation
 
 1. Clone the repository to your directory.
-2. Within the backend and frontend directories, create a .env.development file
-3. 
 
-## 8.0 How we conducted our work.
+2. Within the backend and frontend directories, create a '.env.development' file
+
+3. Follow the sign up flow for the [Spoonacular API](https://spoonacular.com/food-api/console#Dashboard) and obtain the API KEY. 
+
+4. Save the API key in frontend/.env.development as REACT_APP_API_KEY="[api key]" & backend/.env.development as SPOONACULAR_API_KEY="[api key]"
+
+5. Install PostgresSQL. If already installed, skip to step x
+
+'''
+brew install postgresql
+brew services start postgresql
+'''
+
+6. Create a default DB user:
+
+```
+createuser -s postgres
+```
+
+7. And finally, we'll setup a database for our local instance of kitchen genie:
+
+```
+createdb kitchen-genie
+```
+8. Ensure you can connect to the database. If you do not know your user name. Run the command 'whoami' into the CLI. 
+
+'''
+psql postgres://<user>@localhost:5432/kitchen-genie
+'''
+
+9. Save variable PG_URL="postgres://<user>@localhost:5432/kitchen-genie" to backend/.env.development file
+
+11. Run the schema script in the backend to create database.
+
+'''
+deno run -A --unstable schema.js
+'''
+
+12. Save variable ALLOWED_ORIGINS="http://localhost:3000" to backend/.env.development file
+
+13. Add variable REACT_APP_URL="http://localhost:8080" to frontend/.env.development file
+
+14. Install dependencies
+
+'''
+yarn install 
+'''
+
+15. Start frontend app from the route of 'frontend' directory. 
+
+'''
+yarn start
+'''
+
+16. Run server.js from the route of the 'backend' directory.
+
+'''
+deno run -A --unstable server.js
+'''
+
+17. Enjoy
+
+## 9.0 How we conducted our work.
 
 Overall, the team adopted the Agile methodology, utilising kanban (Trello) to organise and assign tasks. Each day we would have a stand up in the morning talking about what each team member had completed the previous day, what we were going to do and what issues individuals were having. For difficult features the team would take part in pair programming, especially if features each team member were building were dependent on each other.  
 
 During the day, we communicated on slack. 
 
-### 8.1 Assigning Tasks 
+### 9.1 Assigning Tasks 
 
 At the start of the project, we began to hack out the key features for our project, categorizing them as 'must haves' and 'desirable' and then turning them into Trello tickets. Each ticket had a user story that covered target user, functionality, and goal; as well as the feature's passing criteria. These tickets were adamantly followed to help the team stay on track.
 
-### 8.2 My specific roles within the team
+### 9.2 My specific roles within the team
 
 1. Database Architecture and Setup. 
 2. Generating the Recipe page.
 3. Deployment 
 
-## 9.0 Extra: What if we had more time?
+## 10.0 Extra: What if we had more time?
 1. Use client-side cookies to save the ingredients the user has during a session, so recipe ingredients can be compared even if the user has not come from the search results page. 
 
 
