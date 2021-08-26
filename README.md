@@ -1,12 +1,18 @@
 # Kitchen Genie 
 
+For the final weeks of Sigma Labs training, trainees were assigned to various group projects, the one I was assigned to was the Kitchen Genie ('recipe' team back then) project. Our team of four consisted of Tawab Rahmani, Keano Robinson, Rafiul Ansari and myself. 
+
+Our goal for this project was to build a tool that home cooks can use to combat household food waste. Since​, by weight, UK households throw away 4.4 million tonnes of edible food (Wrap Study - 2020); And 24% of people do not know what was in their fridge before they went shopping (Wrap Study - 2020). So it was clear to us that we wanted to build an application that helped people come up with recipes from the ingredients they already have at home. 
+
+Supercook was also a main inspiration behind this project, however, we thought we could do so much better upon tearing down the product. 
+
 Live version of [kitchen-genie](https://kitchen-genie.co.uk) is up and running!
 
 ## What is Kitchen Genie?
 
-kitchen genie was a group project where our team decided to combat some of issues surrounding house hold waste, since​ by weight, UK households throw away 4.4 million tonnes of edible food (Wrap Study - 2020). And 24% of people do not know what was in their fridge before they went shopping (Wrap Study - 2020).
+Kitchen genie was a group project where our team decided to combat some of issues surrounding house hold waste, since​ by weight, UK households throw away 4.4 million tonnes of edible food (Wrap Study - 2020). And 24% of people do not know what was in their fridge before they went shopping (Wrap Study - 2020).
 
-To combat this, kitchen-genie aims at giving homecooks inspiration for recipes with the ingredients they already have at home. Add the ingredients to the search bar, click go and retrieve ideas from a database of 320,000 recipes. 
+
 
 ## Key Features 
 
