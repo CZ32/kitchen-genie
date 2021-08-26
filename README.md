@@ -13,7 +13,7 @@ Our goal for this project was to build a tool that home cooks can use to combat 
 
 ![kitchen-genie demo](https://github.com/CZ32/kitchen-genie/blob/readme/frontend/public/Kitchen%20Genie.gif)
 
-#### 1.1 Page Diagram 
+### 1.1 Page Diagram 
 
 - HOME
     - SEARCH RESULTS
@@ -22,7 +22,7 @@ Our goal for this project was to build a tool that home cooks can use to combat 
     - ABOUT US
     - FAQ
 
-#### 1.2 Description 
+### 1.2 Description 
 
 The kitchen-genie website has both a logged in and logged out experience. In the logged in experience, users from the home page can insert ingredients into the search bar. When searched, Kitchen Genie will fetch data from the Spoonacular API and populate recipes on a Search results page. From here, the user (logged in) can favourite recipes by clicking the heart icon on recipe cards or can click a card to navigate to the recipe page. On the Recipe page, the application will fetch recipe data from the Spoonacular API and populate that information in an clean and consistent manner. The user can view recipe description, preparation and what ingredients they do/don't have (if coming from search results). Again, the user can favourite the recipe (if logged in) and can make comments on the recipe if logged in and only view them if logged out. Logged in users can navigate to the favourites page, where the user can view all favourited recipes. 
 
@@ -69,14 +69,14 @@ The way I located this bug was utilising the network and application tools of th
 Currently, the only bug that can be witnessed is that the session cookie does not save client side when the user closes the tab. Therefore the user logs out and has to re-enter details to log back in. This is only an issue with the production version of kitchen-genie.co.uk. Running the application locally servers no problem at all. 
 
 
-### 7.0 Dependencies
+## 7.0 Dependencies
 
 1. Spoonacular API Key
 2. PostgreSQL ([see for installation](https://www.postgresql.org/docs/13/tutorial-install.html))
 3. Yarn ([see more installation](https://yarnpkg.com/getting-started/install))
 4. Deno ([see for installation](https://deno.land/manual/getting_started/installation))
 
-### 8.0 Local Installation
+## 8.0 Local Installation
 
 1. Clone the repository to your directory.
 
@@ -160,5 +160,9 @@ At the start of the project, we began to hack out the key features for our proje
 
 ## 10.0 Extra: What if we had more time?
 1. Use client-side cookies to save the ingredients the user has during a session, so recipe ingredients can be compared even if the user has not come from the search results page. 
+2. Allow users to share recipes among themselves.
+3. Add tags to recipes to enable more advanced queries.
+4. Keep track of more user information to enhance the user experience (search history).
+5. Cache our own recipes in the database. Allows use to control our content but would increase cost of business model. 
 
 
